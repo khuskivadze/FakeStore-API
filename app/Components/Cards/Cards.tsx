@@ -7,23 +7,30 @@ import { useState } from 'react'
 export default  () => {
 
     const [products, setProducts] = useState([])
+    const [sort, setSort] = useState('asc')
 
      
     const getProducts = () => {
-
-        axios.get('https://fakestoreapi.com/products?limit=5').then((result) => {
+        axios.get(`https://fakestoreapi.com/products?sort=${sort}`).then((result) => {
             setProducts(result.data)
         })
     }
-    console.log(products)
 
-
-
+    const onChange = (e:any) => {
+       setSort(e.target.value)
+    }
+    console.log(sort)
+  
     return (
         <>
-
         <section className= {styles.cards}>
             <button className= {styles.button} onClick={getProducts}>Get Products</button>
+
+            <select onChange={onChange}>
+                <option>asc</option>
+                <option>desc</option>
+
+            </select>
 
             <section className= {styles.containers}>
                 <ul className= {styles.containerItems}>

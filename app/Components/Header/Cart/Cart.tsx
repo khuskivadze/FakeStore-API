@@ -10,6 +10,9 @@ export default () => {
     const closeCartBtn = () => {
         setCart(!cart)
     }
+     
+
+
 
     return (
        
