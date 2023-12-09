@@ -1,0 +1,28 @@
+.cart {
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 9.1%;
+    right: 0;
+    background-color: teal;
+    
+    
+}
+
+.close {
+    width: 60px ;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    margin-left: 80%;
+    margin-top: 5%;
+    color: white;
+    cursor: pointer;
+
+
+}
